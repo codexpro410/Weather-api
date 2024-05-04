@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first">it's me first</div>
+    <div id="second">it's me second</div>
+    <input type="text" name="" id="tp">
+    <button id="btn">Click me</button>
+
+    <script>
+        tp = document.getElementById('tp')
+        btn = document.getElementById('btn')
+        first = document.getElementById('first')
+        second = document.getElementById('second')
+        btn.addEventListener('click', ()=>{
+        if (tp.value) {
+            first.style.display ='none'
+            second.style.display ='block'
+            console.log(`YOU DID IT, you wrote ${tp.value}`);
+        } else {
+            second.style.display ='none'
+            first.style.display ='block'
+            console.log(`text is MT, Try Again `);
+            
+        }
+    })
+
+    // does not work
+    {tp.value && console.log(`show text`);}
+    </script>
+</body>
+</html>
